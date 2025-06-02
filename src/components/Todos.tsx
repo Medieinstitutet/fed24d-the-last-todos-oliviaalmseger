@@ -49,6 +49,11 @@ export const Todos = () => {
         localStorage.setItem('todos', JSON.stringify(storedTodos));
     }, [storedTodos]);
 
+    const addTodo = (todoText: string) => { 
+        const newTodo = new Todo(todoText, false); 
+        setStoredTodos([...storedTodos, newTodo]);
+    };
+
 
     console.log(todos);
     return (
@@ -68,7 +73,7 @@ export const Todos = () => {
         </ul>
     </div>
     <div className='add-todo-container'>
-        <AddTodo />
+        <AddTodo addTodo={addTodo}/>
     </div>
     </>
     )
