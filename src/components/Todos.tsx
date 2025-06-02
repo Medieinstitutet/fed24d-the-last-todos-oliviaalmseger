@@ -12,22 +12,31 @@ export const Todos = () => {
         new Todo('Äta frukost', false),
         new Todo('Skola', false),
     ]);
-   
+
+    const handleChange = (id: number) => {
+        setTodos(todos.map(todo => {
+            if (todo.id === id) {
+                return {...todo, isDone : !todo.isDone};
+            }
+            return todo; 
+        }));
+    };
+
+
+    console.log(todos);
     return (
-    <>
-    <div>
+    <div className='todos-container'>
         <h1>{heading}</h1>
         <ul>
             {todos.map((todo => (
                 <li className={todo.isDone ? 'done' : ''} key={todo.id}>
                     <label>
-                        <input type="checkbox" checked={todo.isDone} />
+                        <input type="checkbox" checked={todo.isDone} onChange={() => handleChange(todo.id)} />
                     {todo.todoText} - {new Date(todo.date).toLocaleDateString()}
                     </label>
                 </li>
             )))}
         </ul>
     </div>
-    </>
     )
 };
