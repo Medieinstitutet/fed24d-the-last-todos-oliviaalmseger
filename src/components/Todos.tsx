@@ -14,12 +14,14 @@ export const Todos = () => {
     ]);
 
     const handleChange = (id: number) => {
-        setTodos(todos.map(todo => {
-            if (todo.id === id) {
-                return {...todo, isDone : !todo.isDone};
-            }
-            return todo; 
-        }));
+        // setTodos(todos.map(todo => {
+        //     if (todo.id === id) {
+        //         return {...todo, isDone : !todo.isDone};
+        //     }
+        //     return todo; 
+        // }));
+        const filtered = todos.filter(todo => todo.id !== id);
+        setTodos(filtered);
     };
 
 
