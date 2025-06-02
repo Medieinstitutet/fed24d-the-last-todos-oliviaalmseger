@@ -21,14 +21,22 @@ export const Todos = () => {
     ];
 
     const handleChange = (id: number) => {
+        setStoredTodos(storedTodos.map(todo => {
+             if (todo.id === id) {
+                 return {...todo, isDone : !todo.isDone};
+             }
+             return todo; 
+         }));
+
         // setTodos(todos.map(todo => {
         //     if (todo.id === id) {
         //         return {...todo, isDone : !todo.isDone};
         //     }
         //     return todo; 
         // }));
-        const filtered = storedTodos.filter(todo => todo.id !== id);
-        setStoredTodos(filtered);
+
+        // const filtered = storedTodos.filter(todo => todo.id !== id);
+        // setStoredTodos(filtered);
     };
 
     const [storedTodos, setStoredTodos] = useState<Todo[]>(() => {
