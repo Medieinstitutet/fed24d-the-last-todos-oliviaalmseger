@@ -1,6 +1,7 @@
-import { useEffect, useState } from 'react';
 import '../styles/Todos.css'; 
+import { useEffect, useState } from 'react';
 import { Todo } from '../models/Todo';
+import { AddTodo } from './AddTodo';
 
 export const Todos = () => {
     const heading = 'Att göra:'
@@ -51,8 +52,10 @@ export const Todos = () => {
 
     console.log(todos);
     return (
+    <>
     <div className='todos-container'>
         <h1>{heading}</h1>
+        
         <ul>
             {storedTodos.map((todo => (
                 <li className={todo.isDone ? 'done' : ''} key={todo.id}>
@@ -64,5 +67,9 @@ export const Todos = () => {
             )))}
         </ul>
     </div>
+    <div className='add-todo-container'>
+        <AddTodo />
+    </div>
+    </>
     )
 };
