@@ -1,12 +1,97 @@
-* {
-    background-color: #fffafa;
+
+.todos-container {
+  background-image: url('/public/bgimg.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  padding: 3rem;
+  margin: 2rem auto;
+  max-width: 600px;
+  border-radius: 12px;
+}
+
+h1, label, select, .todos-sorting, ul {
+  background: none;
+}
+
+.todos-container h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.todos-sorting {
+  display: flex;
+  justify-content: flex-end;
+  margin: 1rem 2rem;
+
+}
+
+.the-todos {
+  margin: 0 2rem 2rem;
+  background-color: white;
+}
+
+ul, li, .done, button, form, input {
+  background-color: white;
 }
 
 ul {
+  display: inline-block;
     list-style: none;
+    padding: 0;
+    
+}
+
+li {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 400px;
+  padding: 0.2rem;
 }
 
 .done {
   text-decoration: line-through;
   opacity: 0.6;
 }
+
+.delete-btn {
+    margin-left: 4rem;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* ADD TODO*/
+
+.add-todo-container {
+  background-color: white;
+  max-width: 600px;
+  margin: 1rem auto;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: white;
+}
+
+.form-label {
+  font-size: 2rem;
+  margin-bottom: 4rem;
+  color: #004aad;
+}
+
+.add-todo-container input[type="text"] {
+  display: block;
+  margin: 1rem auto;
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  box-sizing: border-box; 
+}
+

@@ -11,12 +11,12 @@ export const TodoList = ({todos, handleClick, handleDelete}: TodoListProps) => {
     <>
     <ul>
         {todos.map((todo => (
-            <li className={todo.isDone ? 'done' : ''} key={todo.id}>
-                <label>
+            <li>
+                <label className={todo.isDone ? 'done' : ''} key={todo.id}>
                     <input type="checkbox" checked={todo.isDone} onChange={() => handleClick(todo.id)} />
                     {todo.todoText} - {new Date(todo.date).toLocaleDateString()}
                 </label>
-                <button onClick={() => handleDelete(todo.id)}>Ta bort</button>
+                <button className="delete-btn" onClick={() => handleDelete(todo.id)}>Ta bort</button>
             </li>
         )))}
     </ul>

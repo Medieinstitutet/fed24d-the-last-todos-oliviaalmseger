@@ -24,9 +24,13 @@ export const AddTodo = ({addTodo}: AddTodoProps) => {
     <>
     <div>
         <form onSubmit={handleSubmit}>
-            <label htmlFor="todo-input">Lägg till en todo: </label>
-            <input type="text" id="todo-input" value={addContent} onChange={handleChange} placeholder="Lägg till en todo" required />
-            <button>Lägg till</button>
+            <label htmlFor="todo-input" className="form-label">Lägg till en todo: </label>
+            <div className="center">
+                <input type="text" id="todo-input" value={addContent} onChange={handleChange} placeholder="Lägg till en todo" className="form-input" required />
+                <button className="form-btn">Lägg till</button>
+
+            </div>
+
         </form>
     </div>
     </>

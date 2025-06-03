@@ -1,3 +1,13 @@
+* {
+    box-sizing: border-box;
+    background-color: #466ea3;
+}
+
 h1 {
     color: #004aad;
 }
+
+input {
+    margin-right: 1rem;
+}
+

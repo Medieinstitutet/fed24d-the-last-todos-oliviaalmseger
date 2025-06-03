@@ -41,6 +41,11 @@ export const Todos = () => {
     };
 
     const removeTodo = (id: number) => {
+        const todoToRemove = todos.find(todo => todo.id === id)
+        if (!todoToRemove) return;
+        if (!todoToRemove.isDone) {
+            alert("Fuskis! Den är ju inte slutförd!");
+        }
         const notRemoved = todos.filter(todo => todo.id !== id);
         setTodos(notRemoved);
     }; 
