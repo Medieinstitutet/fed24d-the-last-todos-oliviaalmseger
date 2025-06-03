@@ -2,6 +2,7 @@ import '../styles/Todos.css';
 import { useState } from 'react';
 import { Todo } from '../models/Todo';
 import { AddTodo } from './AddTodo';
+import { TodoList } from './TodoList';
 
 export const Todos = () => {
     const heading = 'Att göra:'
@@ -11,6 +12,7 @@ export const Todos = () => {
         new Todo('Skjutsa C till skolan', false),
         new Todo('Springa', false),
         new Todo('Äta frukost', false),
+        new Todo('Vattna i växthuset', false),
         new Todo('Skola', false),
     ];
 
@@ -45,7 +47,8 @@ export const Todos = () => {
     <>
     <div className='todos-container'>
         <h1>{heading}</h1>
-        <ul>
+        <TodoList todos={todos} handleClick={handleChange}/>
+        {/* <ul>
             {todos.map((todo => (
                 <li className={todo.isDone ? 'done' : ''} key={todo.id}>
                     <label>
@@ -54,7 +57,7 @@ export const Todos = () => {
                     </label>
                 </li>
             )))}
-        </ul>
+        </ul> */}
     </div>
     <div className='add-todo-container'>
         <AddTodo addTodo={addTodo}/>
