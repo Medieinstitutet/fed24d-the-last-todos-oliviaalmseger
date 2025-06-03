@@ -11,11 +11,13 @@ export const Todos = () => {
 
     const startTodos = [
         new Todo('Dricka kaffe', false),
-        new Todo('Skjutsa C till skolan', false),
         new Todo('Springa', false),
         new Todo('Äta frukost', false),
         new Todo('Vattna i växthuset', false),
         new Todo('Skola', false),
+        new Todo('Baka kakor', false),
+        new Todo('Hoppa i sängen', false),
+        new Todo('Poppa popcorn', false),
     ];
 
     const [todos, setTodos] = useState<Todo[]>(
@@ -31,9 +33,6 @@ export const Todos = () => {
         });
         setTodos(updatedTodos);
     }; 
-        // const filtered = storedTodos.filter(todo => todo.id !== id);
-        // setStoredTodos(filtered);
-
 
     const addTodo = (todoText: string) => { 
         const newTodo = new Todo(todoText, false); 
@@ -68,7 +67,6 @@ export const Todos = () => {
     };
 
 
-
     console.log(todos);
     localStorage.setItem('todos', JSON.stringify(todos)); 
 
@@ -83,8 +81,6 @@ export const Todos = () => {
         <div className='the-todos'>
             <TodoList todos={sortedTodos()} handleClick={handleChange} handleDelete={removeTodo} />
         </div>
-        {/* <TodoList todos={todos} handleClick={handleChange}/> */}
-
     </div>
     <div className='add-todo-container'>
         <AddTodo addTodo={addTodo}/>

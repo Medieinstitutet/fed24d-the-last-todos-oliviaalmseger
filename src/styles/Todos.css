@@ -5,13 +5,13 @@
   background-repeat: no-repeat;
   background-position: center;
 
-  padding: 3rem;
+  padding: 2.5rem;
   margin: 2rem auto;
   max-width: 600px;
   border-radius: 12px;
 }
 
-h1, label, select, .todos-sorting, ul {
+h1, label, select, option, .todos-sorting, ul {
   background: none;
 }
 
@@ -24,11 +24,27 @@ h1, label, select, .todos-sorting, ul {
   display: flex;
   justify-content: flex-end;
   margin: 1rem 2rem;
+}
 
+select {
+  padding: 0.1rem;
+  border: 1px solid #004aad;
+}
+
+.sorting-label {
+  margin-right: 0.5rem;
+  font-family: "Karla", sans-serif;
+  color: #004aad;
+  font-weight: 700;
+}
+
+label {
+  font-family: "Coming Soon", cursive;
+  
 }
 
 .the-todos {
-  margin: 0 2rem 2rem;
+  margin: 0 2.5rem 2rem;
   background-color: white;
 }
 
@@ -37,18 +53,46 @@ ul, li, .done, button, form, input {
 }
 
 ul {
-  display: inline-block;
+  display: block;
     list-style: none;
     padding: 0;
-    
+    margin: 0; 
 }
 
 li {
   display:flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 400px;
-  padding: 0.2rem;
+  width: 100%;
+  padding: 0.5rem 0;
+  box-sizing: border-box;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #004aad;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  vertical-align: middle;
+}
+
+input[type="checkbox"]:checked::after {
+  content: "✓";
+  color: #004aad;
+  position: absolute;
+  font-size: 14px;
+  top: -4px;
+  left: 1px;
+}
+
+input[type="checkbox"]:hover {
+  box-shadow: 0 0 5px #004aad;
 }
 
 .done {
@@ -57,9 +101,19 @@ li {
 }
 
 .delete-btn {
-    margin-left: 4rem;
+    margin-left: auto;
+    padding: 0.25rem 0.7rem;
     text-decoration: none;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    box-sizing: border-box;
     cursor: pointer;
+    border-radius: 4px;
+}
+
+.delete-btn:hover {
+  background: #f1f4fd;
+  font-size: 0.88rem;
 }
 
 /* ADD TODO*/
@@ -72,7 +126,7 @@ li {
   border-radius: 12px;
 }
 
-.center {
+.center-form-content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -84,6 +138,8 @@ li {
   font-size: 2rem;
   margin-bottom: 4rem;
   color: #004aad;
+  font-family: "Karla", sans-serif;
+  font-weight: 700;
 }
 
 .add-todo-container input[type="text"] {
@@ -93,5 +149,44 @@ li {
   max-width: 100%;
   min-width: 100%;
   box-sizing: border-box; 
+  padding: 0.4rem;
+  border: 2px solid #004aad;
+  border-radius: 4px;
+  font-family: "Coming Soon", cursive;
 }
 
+.form-btn {
+    background-color: #004aad;
+    color: white;
+    padding: 0.6rem 1rem;
+    text-decoration: none;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    box-sizing: border-box;
+    cursor: pointer;
+    border: 1px solid #004aad;
+    border-radius: 4px;
+    
+}
+.form-btn:hover {
+  background: #3a69a7;
+  font-size: 0.88rem;
+}
+
+
+/*Större skärm*/ 
+@media screen and (min-width: 530px) {
+  .the-todos {
+    padding: 1rem;
+    max-width: 600px;
+    border-radius: 12px;
+  }
+
+  li {
+    padding: 0.5rem 1rem;
+  }
+
+  .delete-btn {
+    margin-left: auto;
+  }
+}

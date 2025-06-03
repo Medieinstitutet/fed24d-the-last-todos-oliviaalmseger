@@ -11,8 +11,8 @@ export const TodoList = ({todos, handleClick, handleDelete}: TodoListProps) => {
     <>
     <ul>
         {todos.map((todo => (
-            <li>
-                <label className={todo.isDone ? 'done' : ''} key={todo.id}>
+            <li key={todo.id}>
+                <label className={todo.isDone ? 'done' : ''} >
                     <input type="checkbox" checked={todo.isDone} onChange={() => handleClick(todo.id)} />
                     {todo.todoText} - {new Date(todo.date).toLocaleDateString()}
                 </label>

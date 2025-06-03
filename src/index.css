@@ -5,9 +5,25 @@
 
 h1 {
     color: #004aad;
+    font-family: "Karla", sans-serif;
 }
 
 input {
     margin-right: 1rem;
 }
 
+button {
+  font-family: "Karla", sans-serif;
+}
+
+.coming-soon-regular {
+  font-family: "Coming Soon", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.karla {
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}

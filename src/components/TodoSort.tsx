@@ -8,7 +8,7 @@ type TodoSortProps = {
 export const TodoSort = ({sortTodo, setSortTodo}: TodoSortProps) => {
     return (
     <>
-    <label htmlFor="sorting">Sortera:</label>
+    <label htmlFor="sorting" className="sorting-label">Sortera:</label>
     <select name="" id="sorting" value={sortTodo} onChange={(e) => setSortTodo(e.target.value as SortTodos)}>
         <option value="default"></option>
         <option value="newest">Nyast</option>
