@@ -42,20 +42,20 @@ export const Todos = () => {
 
     const [sortTodo, setSortTodo] = useState<SortTodos>('');
     const sortedTodos = (): Todo[] => {
-    const sorted = [...todos]; 
-    if (sortTodo === 'default') {
-        return [...todos];
-    }
+        const sorted = [...todos]; 
+        if (sortTodo === 'default') {
+            return [...todos];
+        }
 
-    if (sortTodo === 'newest') {
-        sorted.sort((a, b) => b.date - a.date);
-    } else if (sortTodo === 'alphabetical') {
-        sorted.sort((a, b) => a.todoText.localeCompare(b.todoText));
-    } else if (sortTodo === 'unfinished') {
-        sorted.sort((a,b) => Number(a.isDone) - Number(b.isDone));
-    }
-    return sorted;
-};
+        if (sortTodo === 'newest') {
+            sorted.sort((a, b) => b.date - a.date);
+        } else if (sortTodo === 'alphabetical') {
+            sorted.sort((a, b) => a.todoText.localeCompare(b.todoText));
+        } else if (sortTodo === 'unfinished') {
+            sorted.sort((a,b) => Number(a.isDone) - Number(b.isDone));
+        }
+        return sorted;
+    };
 
 
 
