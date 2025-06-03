@@ -3,6 +3,8 @@ import { useState } from 'react';
 import { Todo } from '../models/Todo';
 import { AddTodo } from './AddTodo';
 import { TodoList } from './TodoList';
+import { TodoSort } from './TodoSort';
+import type { SortTodos } from '../types/SortTodos';
 
 export const Todos = () => {
     const heading = 'Att göra:'
@@ -38,6 +40,24 @@ export const Todos = () => {
         setTodos([...todos, newTodo]);
     };
 
+    const [sortTodo, setSortTodo] = useState<SortTodos>('');
+    const sortedTodos = (): Todo[] => {
+    const sorted = [...todos]; 
+    if (sortTodo === 'default') {
+        return [...todos];
+    }
+
+    if (sortTodo === 'newest') {
+        sorted.sort((a, b) => b.date - a.date);
+    } else if (sortTodo === 'alphabetical') {
+        sorted.sort((a, b) => a.todoText.localeCompare(b.todoText));
+    } else if (sortTodo === 'unfinished') {
+        sorted.sort((a,b) => Number(a.isDone) - Number(b.isDone));
+    }
+    return sorted;
+};
+
+
 
     console.log(todos);
     localStorage.setItem('todos', JSON.stringify(todos)); 
@@ -47,17 +67,14 @@ export const Todos = () => {
     <>
     <div className='todos-container'>
         <h1>{heading}</h1>
-        <TodoList todos={todos} handleClick={handleChange}/>
-        {/* <ul>
-            {todos.map((todo => (
-                <li className={todo.isDone ? 'done' : ''} key={todo.id}>
-                    <label>
-                        <input type="checkbox" checked={todo.isDone} onChange={() => handleChange(todo.id)} />
-                    {todo.todoText} - {new Date(todo.date).toLocaleDateString()}
-                    </label>
-                </li>
-            )))}
-        </ul> */}
+        <div className='todos-sorting'>
+            <TodoSort sortTodo={sortTodo} setSortTodo={setSortTodo} />
+        </div>
+        <div className='the-todos'>
+            <TodoList todos={sortedTodos()} handleClick={handleChange}/>
+        </div>
+        {/* <TodoList todos={todos} handleClick={handleChange}/> */}
+
     </div>
     <div className='add-todo-container'>
         <AddTodo addTodo={addTodo}/>
