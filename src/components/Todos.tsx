@@ -40,6 +40,11 @@ export const Todos = () => {
         setTodos([...todos, newTodo]);
     };
 
+    const removeTodo = (id: number) => {
+        const notRemoved = todos.filter(todo => todo.id !== id);
+        setTodos(notRemoved);
+    }; 
+
     const [sortTodo, setSortTodo] = useState<SortTodos>('');
     const sortedTodos = (): Todo[] => {
         const sorted = [...todos]; 
@@ -71,7 +76,7 @@ export const Todos = () => {
             <TodoSort sortTodo={sortTodo} setSortTodo={setSortTodo} />
         </div>
         <div className='the-todos'>
-            <TodoList todos={sortedTodos()} handleClick={handleChange}/>
+            <TodoList todos={sortedTodos()} handleClick={handleChange} handleDelete={removeTodo} />
         </div>
         {/* <TodoList todos={todos} handleClick={handleChange}/> */}
 
