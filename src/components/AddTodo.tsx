@@ -27,7 +27,7 @@ export const AddTodo = ({addTodo}: AddTodoProps) => {
             <label htmlFor="todo-input" className="form-label">Ny att göra-post: </label>
             <div className="center-form-content">
                 <input type="text" id="todo-input" value={addContent} onChange={handleChange} placeholder="Vad ska göras?" className="form-input" required />
-                <button className="form-btn">Lägg till</button>
+                <button className="bg-[#004aad] text-white px-4 py-2 text-sm border border-[#004aad] rounded hover:bg-[#3a69a7] transition-colors duration-200">Lägg till</button>
 
             </div>
 

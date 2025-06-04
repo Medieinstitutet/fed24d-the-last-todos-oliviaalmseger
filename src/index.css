@@ -1,23 +1,23 @@
 @import "tailwindcss";
-
+/* 
 * {
     box-sizing: border-box;
     background-color: #466ea3;
-}
+} 
 
 /* h1 {
     color: #004aad;
     font-family: "Karla", sans-serif;
 } */
-
+/* 
 input {
     margin-right: 1rem;
-}
+} */
 
-button {
+/* button {
   font-family: "Karla", sans-serif;
-}
-
+} */
+/* 
 .coming-soon-regular {
   font-family: "Coming Soon", cursive;
   font-weight: 400;
@@ -28,4 +28,4 @@ button {
   font-family: "Karla", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-}
+} */

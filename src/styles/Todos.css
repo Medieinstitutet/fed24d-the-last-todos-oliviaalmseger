@@ -1,4 +1,6 @@
-
+body {
+  background-color:#466ea3;
+}
 .todos-container {
   background-image: url('/public/bgimg.png');
   background-size: 100% 100%;
@@ -49,7 +51,7 @@ label {
   background-color: white;
 }
 
-ul, li, .done, button, form, input {
+ul, li, .done, form, input {
   background-color: white;
 }
 
@@ -101,7 +103,7 @@ input[type="checkbox"]:hover {
   opacity: 0.6;
 }
 
-.delete-btn {
+/* .delete-btn {
     margin-left: auto;
     padding: 0.25rem 0.7rem;
     text-decoration: none;
@@ -116,7 +118,7 @@ input[type="checkbox"]:hover {
 .delete-btn:hover {
   background: #f1f4fd;
   font-size: 0.88rem;
-}
+} */
 
 /* ADD TODO*/
 
@@ -136,13 +138,13 @@ input[type="checkbox"]:hover {
   background-color: white;
 }
 
-.form-label {
+/* .form-label {
   font-size: 2rem;
   margin-bottom: 4rem;
   color: #004aad;
   font-family: "Karla", sans-serif;
   font-weight: 700;
-}
+} */
 
 .add-todo-container input[type="text"] {
   display: block;
@@ -157,7 +159,7 @@ input[type="checkbox"]:hover {
   font-family: "Coming Soon", cursive;
 }
 
-.form-btn {
+/* .form-btn {
     background-color: #004aad;
     color: white;
     padding: 0.6rem 1rem;
@@ -169,11 +171,11 @@ input[type="checkbox"]:hover {
     border: 1px solid #004aad;
     border-radius: 4px;
     
-}
-.form-btn:hover {
+} */
+/* .form-btn:hover {
   background: #3a69a7;
   font-size: 0.88rem;
-}
+} */
 
 
 /*Större skärm*/ 
