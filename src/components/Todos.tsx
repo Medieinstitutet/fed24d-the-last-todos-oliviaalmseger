@@ -43,7 +43,7 @@ export const Todos = () => {
         const todoToRemove = todos.find(todo => todo.id === id)
         if (!todoToRemove) return;
         if (!todoToRemove.isDone) {
-            alert("Fuskis! Den är ju inte slutförd!");
+            alert("Fuskis! Den var ju inte slutförd!");
         }
         const notRemoved = todos.filter(todo => todo.id !== id);
         setTodos(notRemoved);
