@@ -15,10 +15,10 @@ h1, label, select, option, .todos-sorting, ul {
   background: none;
 }
 
-.todos-container h1 {
+/* .todos-container h1 {
   text-align: center;
   font-size: 3rem;
-}
+} */
 
 .todos-sorting {
   display: flex;

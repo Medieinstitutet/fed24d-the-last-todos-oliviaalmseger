@@ -74,7 +74,7 @@ export const Todos = () => {
     return (
     <>
     <div className='todos-container'>
-        <h1>{heading}</h1>
+        <h1 className='font-karla text-5xl text-center text-[#004aad]'>{heading}</h1>
         <div className='todos-sorting'>
             <TodoSort sortTodo={sortTodo} setSortTodo={setSortTodo} />
         </div>
