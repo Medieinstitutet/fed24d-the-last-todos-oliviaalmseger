@@ -19,7 +19,7 @@ export const TodoList = ({todos, handleClick, handleDelete}: TodoListProps) => {
                     hover:ring-1 hover:ring-[#004aad] align-middle"/>
                     {todo.todoText} - {new Date(todo.date).toLocaleDateString()}
                 </label>
-                <button className="font-[Karla] ml-auto px-3 py-1 text-sm border border-[#004aad] rounded text-[#004aad] hover:bg-[#f1f4fd] transition-colors duration-200 whitespace-nowrap" onClick={() => handleDelete(todo.id)}>Ta bort</button>
+                <button className="font-[Karla] ml-auto px-3 py-1 text-sm border border-[#004aad] rounded text-[#004aad] hover:bg-[#ecf0fd] transition-colors duration-200 whitespace-nowrap" onClick={() => handleDelete(todo.id)}>Ta bort</button>
             </li>
         )))}
     </ul>

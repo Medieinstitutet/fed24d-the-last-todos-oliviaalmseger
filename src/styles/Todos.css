@@ -181,7 +181,7 @@
 
 
 /*Större skärm*/ 
-@media screen and (min-width: 530px) {
+/* @media screen and (min-width: 530px) {
   .the-todos {
     padding: 1rem;
     max-width: 600px;
@@ -195,4 +195,4 @@
   .delete-btn {
     margin-left: auto;
   }
-}
+} */
