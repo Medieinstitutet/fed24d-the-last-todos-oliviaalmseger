@@ -1,8 +1,8 @@
-body {
+/* body {
   background-color:#466ea3;
-}
+} */
 
-.todos-container {
+/* .todos-container {
   background-image: url('/public/bgimg.png');
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -12,7 +12,7 @@ body {
   margin: 2rem auto;
   max-width: 600px;
   border-radius: 12px;
-}
+} */
 
 /* h1, select, option, .todos-sorting, ul {
   background: none;

@@ -73,7 +73,7 @@ export const Todos = () => {
 
     return (
     <>
-    <div className="todos-container">
+    <div className="bg-[url('/public/bgimg.png')] bg-[length:100%_100%] bg-no-repeat bg-center p-10 my-8 mx-auto max-w-[600px] rounded-[12px]">
         <h1 className="font-karla text-5xl font-semibold text-center text-[#004aad] mt-4.5 mb-6.5">{heading}</h1>
         <div className="todos-sorting">
             <TodoSort sortTodo={sortTodo} setSortTodo={setSortTodo} />
