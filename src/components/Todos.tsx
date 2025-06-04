@@ -7,17 +7,17 @@ import { TodoSort } from './TodoSort';
 import type { SortTodos } from '../types/SortTodos';
 
 export const Todos = () => {
-    const heading = 'Att göra:'
+    const heading = "Att göra:";
 
     const startTodos = [
-        new Todo('Dricka kaffe', false),
-        new Todo('Springa', false),
-        new Todo('Äta frukost', false),
-        new Todo('Vattna i växthuset', false),
-        new Todo('Skola', false),
-        new Todo('Baka kakor', false),
-        new Todo('Hoppa i sängen', false),
-        new Todo('Poppa popcorn', false),
+        new Todo("Dricka kaffe", false),
+        new Todo("Springa", false),
+        new Todo("Äta frukost", false),
+        new Todo("Vattna i växthuset", false),
+        new Todo("Skola", false),
+        new Todo("Baka kakor", false),
+        new Todo("Hoppa i sängen", false),
+        new Todo("Poppa popcorn", false),
     ];
 
     const [todos, setTodos] = useState<Todo[]>(
@@ -49,18 +49,18 @@ export const Todos = () => {
         setTodos(notRemoved);
     }; 
 
-    const [sortTodo, setSortTodo] = useState<SortTodos>('');
+    const [sortTodo, setSortTodo] = useState<SortTodos>("");
     const sortedTodos = (): Todo[] => {
         const sorted = [...todos]; 
-        if (sortTodo === 'default') {
+        if (sortTodo === "default") {
             return [...todos];
         }
 
-        if (sortTodo === 'newest') {
+        if (sortTodo === "newest") {
             sorted.sort((a, b) => b.date - a.date);
-        } else if (sortTodo === 'alphabetical') {
+        } else if (sortTodo === "alphabetical") {
             sorted.sort((a, b) => a.todoText.localeCompare(b.todoText));
-        } else if (sortTodo === 'unfinished') {
+        } else if (sortTodo === "unfinished") {
             sorted.sort((a,b) => Number(a.isDone) - Number(b.isDone));
         }
         return sorted;
@@ -68,17 +68,17 @@ export const Todos = () => {
 
 
     console.log(todos);
-    localStorage.setItem('todos', JSON.stringify(todos)); 
+    localStorage.setItem("todos", JSON.stringify(todos)); 
 
 
     return (
     <>
-    <div className='todos-container'>
-        <h1 className='font-karla text-5xl font-semibold text-center text-[#004aad] mt-4.5 mb-6.5'>{heading}</h1>
-        <div className='todos-sorting'>
+    <div className="todos-container">
+        <h1 className="font-karla text-5xl font-semibold text-center text-[#004aad] mt-4.5 mb-6.5">{heading}</h1>
+        <div className="todos-sorting">
             <TodoSort sortTodo={sortTodo} setSortTodo={setSortTodo} />
         </div>
-        <div className='the-todos'>
+        <div className="bg-white mx-10 my-8">
             <TodoList todos={sortedTodos()} handleClick={handleChange} handleDelete={removeTodo} />
         </div>
     </div>
