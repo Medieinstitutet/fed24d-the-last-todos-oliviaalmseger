@@ -82,7 +82,7 @@ export const Todos = () => {
             <TodoList todos={sortedTodos()} handleClick={handleChange} handleDelete={removeTodo} />
         </div>
     </div>
-    <div className='add-todo-container'>
+    <div className="bg-white max-w-[600px] mx-auto my-4 px-8 py-4 rounded-xl">
         <AddTodo addTodo={addTodo}/>
     </div>
     </>
