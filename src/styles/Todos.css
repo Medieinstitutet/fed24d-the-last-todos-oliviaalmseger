@@ -1,6 +1,7 @@
 body {
   background-color:#466ea3;
 }
+
 .todos-container {
   background-image: url('/public/bgimg.png');
   background-size: 100% 100%;
@@ -13,9 +14,9 @@ body {
   border-radius: 12px;
 }
 
-h1, select, option, .todos-sorting, ul {
+/* h1, select, option, .todos-sorting, ul {
   background: none;
-}
+} */
 
 /* .todos-container h1 {
   text-align: center;
@@ -52,27 +53,27 @@ select {
   background-color: white;
 }
 
-ul, li, .done, form, input {
+/* ul, li, .done, form, input {
   background-color: white;
-}
+} */
 
-ul {
+/* ul {
   display: block;
     list-style: none;
     padding: 0;
     margin: 0; 
-}
+} */
 
-li {
+/* li {
   display:flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   padding: 0.5rem 0;
   box-sizing: border-box;
-}
+} */
 
-input[type="checkbox"] {
+/* input[type="checkbox"] {
   appearance: none;
   -webkit-appearance: none;
   width: 16px;
@@ -84,25 +85,25 @@ input[type="checkbox"] {
   position: relative;
   transition: all 0.2s ease-in-out;
   vertical-align: middle;
-}
+} */
 
-input[type="checkbox"]:checked::after {
+/* input[type="checkbox"]:checked::after {
   content: "✓";
   color: #004aad;
   position: absolute;
   font-size: 14px;
   top: -4px;
   left: 1px;
-}
+} */
 
-input[type="checkbox"]:hover {
+/* input[type="checkbox"]:hover {
   box-shadow: 0 0 5px #004aad;
-}
+} */
 
-.done {
+/* .done {
   text-decoration: line-through;
   opacity: 0.6;
-}
+} */
 
 /* .delete-btn {
     margin-left: auto;
