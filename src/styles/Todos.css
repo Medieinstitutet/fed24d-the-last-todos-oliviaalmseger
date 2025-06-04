@@ -23,13 +23,13 @@ body {
   font-size: 3rem;
 } */
 
-.todos-sorting {
+/* .todos-sorting {
   display: flex;
   justify-content: flex-end;
   margin: 1rem 2rem;
-}
+} */
 
-select {
+/* select {
   padding: 0.1rem;
   border: 1px solid #004aad;
   border-radius: 4px;
@@ -40,7 +40,7 @@ select {
   font-family: "Karla", sans-serif;
   color: #004aad;
   font-weight: 700;
-}
+} */
 
 /* TEXT i LISTAN 
  label {
