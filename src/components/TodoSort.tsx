@@ -15,7 +15,6 @@ export const TodoSort = ({sortTodo, setSortTodo}: TodoSortProps) => {
             <option value="newest">Nyast</option>
             <option value="alphabetical">Alfabetisk</option>
             <option value="unfinished">Ofärdiga-Färdiga</option>
-            <option value="default">Ingen sortering</option>
         </select>
     </div>
     )
