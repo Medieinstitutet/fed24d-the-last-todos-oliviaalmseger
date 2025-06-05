@@ -13,8 +13,8 @@ export const TodoList = ({todos, handleClick, handleDelete}: TodoListProps) => {
         {todos.map((todo => (
             <li key={todo.id} className="font-[Coming_soon] flex items-center justify-between w-full py-2">
                 <label className={`${todo.isDone ? 'line-through opacity-60' : ''}`}>
-                    <input type="checkbox" checked={todo.isDone} onChange={() => handleClick(todo.id)} className="mr-2.5  w-4 h-4 
-                    border-2 border-[#004aad] rounded cursor-pointer appearance-none relative 
+                    <input type="checkbox" checked={todo.isDone} onChange={() => handleClick(todo.id)} aria-checked={todo.isDone} 
+                    className="mr-2.5  w-4 h-4 border-2 border-[#004aad] rounded cursor-pointer appearance-none relative 
                     checked:after:content-['✓'] checked:after:text-[#004aad] checked:after:absolute checked:after:top-[-4px] checked:after:left-[2px] 
                     hover:ring-1 hover:ring-[#004aad] align-middle"/>
                     {todo.todoText} 
