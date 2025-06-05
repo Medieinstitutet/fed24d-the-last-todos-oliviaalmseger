@@ -1,4 +1,3 @@
-import '../styles/Todos.css'; 
 import { useState } from 'react';
 import { Todo } from '../models/Todo';
 import { AddTodo } from './AddTodo';
@@ -24,7 +23,7 @@ export const Todos = () => {
         JSON.parse(localStorage.getItem('todos') || JSON.stringify(startTodos))
     );
 
-    const handleChange = (id: number) => { // Dvs isDone
+    const handleDone = (id: number) => { // Dvs isDone
         const updatedTodos = todos.map(todo => {
             if (todo.id === id) {
                 return {...todo, isDone: !todo.isDone};
@@ -79,7 +78,7 @@ export const Todos = () => {
             <TodoSort sortTodo={sortTodo} setSortTodo={setSortTodo} />
         </div>
         <div className="bg-white mx-10 my-8">
-            <TodoList todos={sortedTodos()} handleClick={handleChange} handleDelete={removeTodo} />
+            <TodoList todos={sortedTodos()} handleClick={handleDone} handleDelete={removeTodo} />
         </div>
     </div>
     <div className="bg-white max-w-[600px] mx-auto my-4 px-8 py-4 rounded-xl">
