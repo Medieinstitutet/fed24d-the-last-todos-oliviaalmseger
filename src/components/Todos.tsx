@@ -11,13 +11,13 @@ export const Todos = () => {
 
     const startTodos = [
         new Todo("Dricka kaffe", false),
-        new Todo("Springa", false),
+        new Todo("Morgonjogg", false),
         new Todo("Äta frukost", false),
         new Todo("Vattna i växthuset", false),
-        new Todo("Skola", false),
+        new Todo("Fixa med inlämningen", false),
         new Todo("Baka kakor", false),
-        new Todo("Hoppa i sängen", false),
         new Todo("Poppa popcorn", false),
+        new Todo("Filmkväll", false),
     ];
 
     const [todos, setTodos] = useState<Todo[]>(
@@ -57,7 +57,7 @@ export const Todos = () => {
         }
 
         if (sortTodo === "newest") {
-            sorted.sort((a, b) => b.date - a.date);
+            sorted.sort((a, b) => b.createdAt - a.createdAt);
         } else if (sortTodo === "alphabetical") {
             sorted.sort((a, b) => a.todoText.localeCompare(b.todoText));
         } else if (sortTodo === "unfinished") {

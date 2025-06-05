@@ -18,7 +18,7 @@ export const TodoList = ({todos, handleClick, handleDelete}: TodoListProps) => {
                     checked:after:content-['✓'] checked:after:text-[#004aad] checked:after:absolute checked:after:top-[-4px] checked:after:left-[2px] 
                     hover:ring-1 hover:ring-[#004aad] align-middle"/>
                     {todo.todoText} 
-                    <p className="text-xs"> Tillagd: {new Date(todo.date).toLocaleDateString()}</p>
+                    <p className="text-xs"> Tillagd: {new Date(todo.createdAt).toLocaleDateString()}</p>
                 </label>
                 <button className="font-[Karla] ml-auto mr-7 px-3 py-1 text-sm border border-[#004aad] rounded text-[#004aad] hover:bg-[#e5eafc]  transition-colors duration-200 whitespace-nowrap sm:mr-8" onClick={() => handleDelete(todo.id)}>Ta bort</button>
             </li>
