@@ -24,7 +24,7 @@ export const Todos = () => {
         JSON.parse(localStorage.getItem('todos') || JSON.stringify(startTodos))
     );
 
-    const handleChange = (id: number) => {
+    const handleChange = (id: number) => { // Dvs isDone
         const updatedTodos = todos.map(todo => {
             if (todo.id === id) {
                 return {...todo, isDone: !todo.isDone};
@@ -73,7 +73,7 @@ export const Todos = () => {
 
     return (
     <>
-    <div className="bg-[url('/public/bgimg.png')] bg-[length:100%_100%] bg-no-repeat bg-center p-10 my-8 mx-auto max-w-[600px] rounded-[12px]">
+    <div className="bg-[url('/bgimg.png')] bg-[length:100%_100%] bg-no-repeat bg-center p-10 my-8 mx-auto max-w-[600px] rounded-[12px]">
         <h1 className="font-karla text-5xl font-semibold text-center text-[#004aad] mt-4.5 mb-6.5">{heading}</h1>
         <div className="todos-sorting">
             <TodoSort sortTodo={sortTodo} setSortTodo={setSortTodo} />
