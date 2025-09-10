@@ -1,56 +1,73 @@
 # 📌 Rättningsrapport – fed24d-the-last-todos-oliviaalmseger
 
 ## 🎯 Uppgiftens Krav:
-# Inlämningsuppgift Todo
+# Assignment - The Last Todos
 
-I denna inlämningsuppgift kommer ni att skapa er egen todo-lista i en react-applikation.
-Sidan skall visa ett antal punkter som skall göras. Dessa skall då komma upp på skärmen i form av en lista. När uppgiften är slutförd skall användaren kunna markera uppgiften som slutförd och uppgiften skall då tas bort från listan.
+## 🚀 Project Overview 
+This project is a Todo List application built as part of an assignment to practice component-based architecture, state management, and styling using Tailwind CSS.
 
-## Betyg G
+### 📝 Assignment Requirements & Criteria
+This project was developed based on a course assignment with separate requirements for passing (G) and higher grade (VG).
 
-- Skapa en hårdkodad lista med punkter att göra (hitta på egna punkter, dessa skall inte bara vara en text)
-- Presentera listan på skärmen, helst med lite kontroll. Detta betyder i en html-struktur t.ex. i en ul/li-lista
-- Implementera klickhändelse för att hantera borttagandet av en todo.
-- Todo markeras som klar/tas bort från skärmen och markeras som klar i javascript-listan.
+#### Requirements for Grade G:
+- Create a hardcoded list of todos (with more than just plain text)
+- Display the list on screen 
+- Allow marking a todo as done
+- Update the JavaScript list when a todo is completed
+- Implement a click handler to remove a todo
+- Persist data using localStorage
+- Use at least one component
+- Use state with a list of objects
 
-## Betyg VG
+#### Requirements for Grade VG (in addition to above):
+- Allow toggling todos back from done to undone
+- Add a form to create new todos
+- Allow sorting of the list by different criteria
+- Implement a UI framework (Tailwind CSS was chosen here)
+- Use at least three components
+- Use Lifting State Up to manage shared state between components
 
-- Alla punkter under G
-- Kunna visa även klara händelser och klicka tillbaka den så att de blir oklara igen.
-- Skapa ett formulär som tillåter att en användare skapar nya todos efterhand.
-- Använda lifting state up för att dela upp dina komponenter bättre.
-- Kunna sortera ordningen på dina todos.
-- Implementera ett valfritt grafiskt ramverk till din todolista, t.ex. material ui eller tailwind.
-- Egen css får gärna skrivas och då skall ni ha en bra struktur och använda flex eller grid på ett bra sätt.
+### 🪄 What I Built
+Users can view existing todos, add new ones, mark them as completed or uncompleted, delete them, and sort the list in different ways. The app is fully responsive and adapts well to different screen sizes. The visual design is intentionally minimalistic and clean, using playful fonts to resemble a handwritten to-do list.
 
-## Allmänt
+## 🎥 Demo 
+[Click here to view the demo](https://medieinstitutet.github.io/fed24d-the-last-todos-oliviaalmseger/)
 
-Projektet ni har är ett vite-projekt. D.v.s. ni måste köra:
+## 📸 Screenshots
+**Whole page**
+![Whole Page](todo.png)
 
-```shell
-npm i
-```
+**Sorting**
+![Sorting](sort.png)
 
-och
 
-```shell
-npm run dev 
-```
+## 💻 Tech Stack 
+![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)
+![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 
-för att köra projektet.
 
-- Det finns många sätt att lösa denna uppgift på. Om ni känner er osäkra på någonting, fråga hellre någon gång för mycket så att ni känner er säkra på vad ni utvecklar.
-- Ni får gärna ändra strukturen i projektet, detta är bara en grund.
-- Börja med att planera ert arbete, börja inte med Visual Studio Code, även om det är lockande.
-- Gör ert bästa att inte stressa. Lättare sagt än gjort, jag vet. Men ingen mår bättre av att stressa.
-- Ha roligt, skratta när det blir fel och fortsätt att vara nyfiken :)
+## ✍️ Author 
+Created by: 
+- [Olivia Almseger ](https://github.com/oliviaalmseger) 	
+
+
+## 🤝 Credits
+This project was developed as part of the curriculum at [Medieinstitutet](https://medieinstitutet.se/) during our first year of studies.
 
 
 ## 🔍 ESLint-varningar:
 
 
 ## 🏆 **Betyg: VG**
-📌 **Motivering:** Koden uppfyller alla krav för betyg G och VG. Den presenterar en todo-lista med funktionalitet för att hantera tillagda och färdiga uppgifter samt att dela upp dessa i komponenter. Projektet använder också ett grafiskt ramverk (Tailwind) och erbjuder sorteringsfunktionalitet som efterfrågas. Lifting state up används effektivt i komponenterna, och det finns stöd för att se, markera och ta bort uppgifter korrekt.
+📌 **Motivering:** Koden uppfyller alla krav för både betyget G och VG. Appen implementerar en enkel todo-lista med all efterfrågad funktionalitet som markerings- och sorteringsmöjligheter. Lokal lagring av data fungerar och användaren kan både lägga till och ta bort todos. Dessutom används state management och komponentbaserad arkitektur på ett korrekt sätt med React. Projektet är även stiliserat med Tailwind CSS och har minst tre komponenter samt använder 'Lifting State Up' för att hantera delad state mellan komponenterna.
 
 💡 **Förbättringsförslag:**  
-Koden är välstrukturerad och innehåller relevant funktionsseparation. En möjlighet till fördjupad förbättring kan vara att separera business-logik ännu mer från UI-komponenterna, till exempel genom att använda custom hooks. Tydligare kommentarer för mer komplexa delar av koden skulle kunna läggas till för att förbättra läsbarhet. En förbättrad hantering av unika ids skulle kunna betänkas, för närvarande skapas ids baserat på 'Date.now() + Math.random()', vilket kan leda till kollisioner i ovanliga fall.
+Koden överlag är välstrukturerad och dokumenterad. För att ytterligare förbättra kodkvaliteten kan du överväga att lägga till fler testfall för att säkerställa att alla funktionaliteter fungerar som avsett under olika scenarier. Det hade också varit bra att inkludera funktionalitetstester för att öka tillförlitligheten. Att abstrahera vissa upprepade stylingkonfigurationer, särskilt inom Tailwind CSS-klasser, till en mer modulär approach skulle kunna göra det lättare att underhålla och återanvända kod. Ytterligare kommentarer i koden kan också vara till hjälp för att förklara mer komplexa kodavsnitt.
